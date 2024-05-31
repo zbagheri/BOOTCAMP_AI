@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/Hamed-Aghapanah/BOOTCAMP_AI/blob/main/p1.PNG" width="600"/>
+  <img src="https://github.com/Hamed-Aghapanah/BOOTCAMP_AI/blob/main/p1.PNG" width="1000"/>
   <div>&nbsp;</div>
   <div align="center">
     <b><font size="5">Hamed Aghapanah </font></b>
