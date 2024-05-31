@@ -1,0 +1,40 @@
+# Author : Jonas Raschidie (Rashidi)
+import matplotlib.pyplot as plt
+import math
+import random
+import numpy as np
+import scipy.integrate as int 
+
+k = random.randint(0,3)
+label1 = r'$\gamma =5\%, \delta=1\%, k_0 =5$'+ str(k)
+label2 = r'$\gamma =10\%, \delta=2\%, k_0 =5$'+ str(k)
+x_data = np.arange(0,20,0.1)
+y_data = np.arange(0,20,0.1)
+y_data1 = np.arange(0,20,0.1)
+K_low =  k * 0.01
+k_high = k*0.05
+i = 0
+def f(x):
+    return int.quad (lambda k : math.sin(x**math.pi*k)  , K_low, k_high)
+K_low =  k * 0.02
+k_high = k*0.06
+i = 0
+
+for item in enumerate(x_data) :
+    y_data[i] = f(x_data[i])[0]
+    i=i+1
+
+k_low =  k*0.1
+k_high = k*0.055
+
+i=0
+for item in x_data :
+    y_data1[i] = f(x_data[i])[0]
+    i = i +1
+fig = plt.figure(1,figsize=(4,4))
+plt.plot(x_data, y_data, color = 'blue', linestyle='--',label=label1)
+plt.plot(x_data, y_data1, color='red', linestyle = '-', label= label2)
+plt.ylim(-0.1,0.1)
+plt.legend(loc='lower left', fontsize='small',borderpad=1.5)
+plt.xlabel(r'x($\mathring{A}$)')
+plt.ylabel(r'$\int_{-k_0 *\gamma}^{k_0 *\delta}-4U_0 cos($2 pi x/k$) cos($2 pi y/k$)dz$')
