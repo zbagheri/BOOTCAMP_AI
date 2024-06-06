@@ -29,7 +29,7 @@
   ( پس از بارگزاری عکس و برنامه به اسم خودتان، آنرا در زیر اسمتان نمایش دهید )
 
 
-
+<img src="https://github.com/Hamed-Aghapanah/BOOTCAMP_AI/blob/main/SAMPLE.PNG" width="1000"/>
 
 
 3) Jonas Raschidie >= Mohammad Amin Rashidi
